@@ -58,7 +58,7 @@
             <TextBlock x:Name="box"/>
         </Viewbox>
 
-        <Button Click="Button_Clear_Click" x:Name="Button_Clear" Grid.Column="0" Grid.Row="3" Content="CL"/>
+        <Button Click="Button_Clear_Click" x:Name="Button_Clear" Grid.Column="0" Grid.Row="3" Content="CL" Background="Blue"/>
         <Button Click="Button_Square_Click" x:Name="Button_Square" Grid.Column="1" Grid.Row="3" Content="^" Background="Gray"/>
         <Button Click="Button_Square_Root_Click" x:Name="Button_Square_Root" Grid.Column="2" Grid.Row="3" Content="√" Background="Gray"/>
         <Button Click="Button_Add_Click" x:Name="Button_Add" Grid.Column="3" Grid.Row="3" Content="+" Background="Gray"/>
@@ -80,7 +80,8 @@
 
         <Button Click="Button_Del_Click" x:Name="Button_Del" Grid.Column="0" Grid.Row="7" Content="DEL" Background="red"/>
         <Button Click="Button_0_Click" x:Name="Button_0" Grid.Column="1" Grid.Row="7" Content="0"/>
-        <Button Click="Button_Enter_Click" x:Name="Button_Enter" Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="2" Content="Enter" Background="Green"/>
+        <Button Click="Button_Decimal_Click" x:Name="Button_Decimal" Grid.Column="2" Grid.Row="7" Content="."/>
+        <Button Click="Button_Enter_Click" x:Name="Button_Enter" Grid.Column="3" Grid.Row="7" Content="=" Background="Green"/>
 
     </Grid>
 </Window>

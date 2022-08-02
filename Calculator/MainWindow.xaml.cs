@@ -163,6 +163,11 @@ namespace Calculator
             }
         }
 
+        private void Button_Decimal_Click(object sender, RoutedEventArgs e)
+        {
+            box.Text += ".";
+        }
+
         private void Button_0_Click(object sender, RoutedEventArgs e)
         {
             box.Text += "0";
@@ -174,37 +179,37 @@ namespace Calculator
             if (contents.Contains("+"))
             {
                 var results = contents.Split('+');
-                box.Text = (Int32.Parse(results[0]) + Int32.Parse(results[1])).ToString();
+                box.Text = (double.Parse(results[0]) + double.Parse(results[1])).ToString();
                 max = false;
             }
             if (contents.Contains("-"))
             {
                 var results = contents.Split('-');
-                box.Text = (Int32.Parse(results[0]) - Int32.Parse(results[1])).ToString();
+                box.Text = (double.Parse(results[0]) - double.Parse(results[1])).ToString();
                 max = false;
             }
             if (contents.Contains("x"))
             {
                 var results = contents.Split('x');
-                box.Text = (Int32.Parse(results[0]) * Int32.Parse(results[1])).ToString();
+                box.Text = (double.Parse(results[0]) * double.Parse(results[1])).ToString();
                 max = false;
             }
             if (contents.Contains("÷"))
             {
                 var results = contents.Split('÷');
-                box.Text = (Int32.Parse(results[0]) / Int32.Parse(results[1])).ToString();
+                box.Text = (double.Parse(results[0]) / double.Parse(results[1])).ToString();
                 max = false;
             }
             if (contents.Contains("^"))
             {
                 var results = contents.Split('^');
-                box.Text = Math.Pow(Int32.Parse(results[0]), Int32.Parse(results[1])).ToString();
+                box.Text = Math.Pow(double.Parse(results[0]), double.Parse(results[1])).ToString();
                 max = false;
             }
             if (contents.Contains("√"))
             {
                 var results = contents.Substring(1);
-                box.Text = Math.Sqrt(Convert.ToDouble(Int32.Parse(results))).ToString();
+                box.Text = Math.Sqrt(Convert.ToDouble(double.Parse(results))).ToString();
                 max = false;
             }
 

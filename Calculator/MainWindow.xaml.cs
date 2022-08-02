@@ -65,11 +65,8 @@ namespace Calculator
 
         private void Button_Square_Root_Click(object sender, RoutedEventArgs e)
         {
-            if (!max)
-            {
-                box.Text += "√";
-                max = true;
-            }
+            box.Text = "√";
+            max = true;
         }
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)

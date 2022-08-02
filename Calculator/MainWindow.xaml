@@ -5,8 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        ResizeMode="NoResize"
+        Title="MainWindow" Height="500" Width="300">
+    <Grid x:Name="Container">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="3" Margin="20"/>
+
+        <Button Click="Button_Clear" x:Name="Button_Clear" Grid.Column="0" Grid.Row="3" Content="CL"/>
+        <Button Click="Button_LBracket" x:Name="Button_LBracket" Grid.Column="1" Grid.Row="3" Content="("/>
+        <Button Click="Button_RBracket" x:Name="Button_RBracket" Grid.Column="2" Grid.Row="3" Content=")"/>
+        <Button Click="Button_Add" x:Name="Button_Add" Grid.Column="3" Grid.Row="3" Content="+"/>
+
+        <Button Click="Button_7" x:Name="Button_7" Grid.Column="0" Grid.Row="4" Content="7"/>
+        <Button Click="Button_8" x:Name="Button_8" Grid.Column="1" Grid.Row="4" Content="8"/>
+        <Button Click="Button_9" x:Name="Button_9" Grid.Column="2" Grid.Row="4" Content="9"/>
+        <Button Click="Button_Minus" x:Name="Button_Minus" Grid.Column="3" Grid.Row="4" Content="-"/>
+
+        <Button Click="Button_4" x:Name="Button_4" Grid.Column="0" Grid.Row="5" Content="4"/>
+        <Button Click="Button_5" x:Name="Button_5" Grid.Column="1" Grid.Row="5" Content="5"/>
+        <Button Click="Button_6" x:Name="Button_6" Grid.Column="2" Grid.Row="5" Content="6"/>
+        <Button Click="Button_Multiplication" x:Name="Button_Multiplication" Grid.Column="3" Grid.Row="5" Content="x"/>
+
+        <Button Click="Button_1" x:Name="Button_1" Grid.Column="0" Grid.Row="6" Content="1"/>
+        <Button Click="Button_2" x:Name="Button_2" Grid.Column="1" Grid.Row="6" Content="2"/>
+        <Button Click="Button_3" x:Name="Button_3" Grid.Column="2" Grid.Row="6" Content="3"/>
+        <Button Click="Button_Divide" x:Name="Button_Devide" Grid.Column="3" Grid.Row="6" Content="÷"/>
+
+        <Button Click="Button_Decimal" x:Name="Button_Decimal" Grid.Column="0" Grid.Row="7" Content="."/>
+        <Button Click="Button_0" x:Name="Button_0" Grid.Column="1" Grid.Row="7" Content="0"/>
+        <Button Click="Button_Enter" x:Name="Button_Enter" Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="2" Content="Enter"/>
+
     </Grid>
 </Window>

@@ -153,16 +153,23 @@ namespace Calculator
             }
         }
 
-        private void Button_Decimal_Click(object sender, RoutedEventArgs e)
+        private void Button_Del_Click(object sender, RoutedEventArgs e)
         {
-            box.Text += ".";
+            // if contents are empty
+            if (box.Text.Length != 0)
+            {
+                box.Text = box.Text.Remove(box.Text.Length - 1);
+                if (!(box.Text.Contains("+") & box.Text.Contains("-") & box.Text.Contains("x") & box.Text.Contains("÷") & box.Text.Contains("^") & box.Text.Contains("√"))) 
+                {
+                    max = false;
+                }
+            }
         }
 
         private void Button_0_Click(object sender, RoutedEventArgs e)
         {
             box.Text += "0";
         }
-
 
         private void Button_Enter_Click(object sender, RoutedEventArgs e)
         {

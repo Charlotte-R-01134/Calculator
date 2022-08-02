@@ -13,10 +13,27 @@
             <Setter Property="FontSize" Value="40"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0.5"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Style.Resources>
         </Style>
 
+        <Style TargetType="Label">
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="Background" Value="White"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Style.Resources>
+        </Style>
     </Window.Resources>
-    <Grid x:Name="Container">
+
+    <Grid x:Name="Container" Background="black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -34,35 +51,36 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Viewbox Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="3" Margin="20">
+
+        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="3" Margin="10"/>
+
+        <Viewbox Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="3" Margin="10">
             <TextBlock x:Name="box"/>
         </Viewbox>
 
-        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="3" Margin="20"/>
-
         <Button Click="Button_Clear_Click" x:Name="Button_Clear" Grid.Column="0" Grid.Row="3" Content="CL"/>
-        <Button Click="Button_Square_Click" x:Name="Button_Square" Grid.Column="1" Grid.Row="3" Content="^"/>
-        <Button Click="Button_Square_Root_Click" x:Name="Button_Square_Root" Grid.Column="2" Grid.Row="3" Content="√"/>
-        <Button Click="Button_Add_Click" x:Name="Button_Add" Grid.Column="3" Grid.Row="3" Content="+"/>
+        <Button Click="Button_Square_Click" x:Name="Button_Square" Grid.Column="1" Grid.Row="3" Content="^" Background="Gray"/>
+        <Button Click="Button_Square_Root_Click" x:Name="Button_Square_Root" Grid.Column="2" Grid.Row="3" Content="√" Background="Gray"/>
+        <Button Click="Button_Add_Click" x:Name="Button_Add" Grid.Column="3" Grid.Row="3" Content="+" Background="Gray"/>
 
         <Button Click="Button_7_Click" x:Name="Button_7" Grid.Column="0" Grid.Row="4" Content="7"/>
         <Button Click="Button_8_Click" x:Name="Button_8" Grid.Column="1" Grid.Row="4" Content="8"/>
         <Button Click="Button_9_Click" x:Name="Button_9" Grid.Column="2" Grid.Row="4" Content="9"/>
-        <Button Click="Button_Minus_Click" x:Name="Button_Minus" Grid.Column="3" Grid.Row="4" Content="-"/>
+        <Button Click="Button_Minus_Click" x:Name="Button_Minus" Grid.Column="3" Grid.Row="4" Content="-" Background="Gray"/>
 
         <Button Click="Button_4_Click" x:Name="Button_4" Grid.Column="0" Grid.Row="5" Content="4"/>
         <Button Click="Button_5_Click" x:Name="Button_5" Grid.Column="1" Grid.Row="5" Content="5"/>
         <Button Click="Button_6_Click" x:Name="Button_6" Grid.Column="2" Grid.Row="5" Content="6"/>
-        <Button Click="Button_Multiplication_Click" x:Name="Button_Multiplication" Grid.Column="3" Grid.Row="5" Content="x"/>
+        <Button Click="Button_Multiplication_Click" x:Name="Button_Multiplication" Grid.Column="3" Grid.Row="5" Content="x" Background="Gray"/>
 
         <Button Click="Button_1_Click" x:Name="Button_1" Grid.Column="0" Grid.Row="6" Content="1"/>
         <Button Click="Button_2_Click" x:Name="Button_2" Grid.Column="1" Grid.Row="6" Content="2"/>
         <Button Click="Button_3_Click" x:Name="Button_3" Grid.Column="2" Grid.Row="6" Content="3"/>
-        <Button Click="Button_Divide_Click" x:Name="Button_Divide" Grid.Column="3" Grid.Row="6" Content="÷"/>
+        <Button Click="Button_Divide_Click" x:Name="Button_Divide" Grid.Column="3" Grid.Row="6" Content="÷" Background="Gray"/>
 
-        <Button Click="Button_Decimal_Click" x:Name="Button_Decimal" Grid.Column="0" Grid.Row="7" Content="."/>
+        <Button Click="Button_Del_Click" x:Name="Button_Del" Grid.Column="0" Grid.Row="7" Content="DEL" Background="red"/>
         <Button Click="Button_0_Click" x:Name="Button_0" Grid.Column="1" Grid.Row="7" Content="0"/>
-        <Button Click="Button_Enter_Click" x:Name="Button_Enter" Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="2" Content="Enter"/>
+        <Button Click="Button_Enter_Click" x:Name="Button_Enter" Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="2" Content="Enter" Background="Green"/>
 
     </Grid>
 </Window>

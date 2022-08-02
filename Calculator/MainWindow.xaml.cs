@@ -155,11 +155,7 @@ namespace Calculator
 
         private void Button_Decimal_Click(object sender, RoutedEventArgs e)
         {
-            if (!max)
-            {
-                box.Text += ".";
-                max = true;
-            }
+            box.Text += ".";
         }
 
         private void Button_0_Click(object sender, RoutedEventArgs e)
